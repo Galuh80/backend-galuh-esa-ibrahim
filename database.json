@@ -1,11 +1,11 @@
 {
     "dev": {
-        "driver": "mysql",
-        "host": "localhost",
-        "user": "root",
-        "password": "root",
-        "database": "db_assesment_backend",
-        "port": 3306
+        "driver": "your driver",
+        "host": "your host",
+        "user": "your database user ",
+        "password": "your database password",
+        "database": "your database",
+        "port": "your database port"
     }
-  }
+}
   

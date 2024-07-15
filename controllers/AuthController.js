@@ -43,7 +43,7 @@ const loginUser = async (req, res) => {
         }
     
         const accessToken = generateAccessToken({ id: user.id, role_id: user.role_id });
-        res.json({ accessToken });
+        res.status(200).json({ accessToken });
         } catch (error) {
         res.status(500).json({ error: 'Failed to log in' });
     }
