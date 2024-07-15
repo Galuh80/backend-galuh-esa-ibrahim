@@ -18,18 +18,19 @@ exports.up = function(db) {
   return db.createTable('products', {
     id: { type: 'int', primaryKey: true, autoIncrement: true },
     name: { type: 'string', notNull: true },
-    code: { type: 'string', notNull: true }
+    description: { type: 'string', notNull: true },
+    price: { type: 'int', notNull: true },
   }).then(
     function() {
-      return db.insert('products', ['name', 'code'], ['Product1', 'P001']);
+      return db.insert('products', ['name', 'description', 'price'], ['Product1', 'P001', '200000']);
     }
   ).then(
     function() {
-      return db.insert('products', ['name', 'code'], ['Product2', 'P002']);
+      return db.insert('products', ['name', 'description', 'price'], ['Product2', 'P002', '300000']);
     }
   ).then(
     function() {
-      return db.insert('products', ['name', 'code'], ['Product3', 'P003']);
+      return db.insert('products', ['name', 'description', 'price'], ['Product3', 'P003', '400000']);
     }
   );
 };
